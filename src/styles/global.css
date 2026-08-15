@@ -5126,3 +5126,15 @@ body,
   }
 
 }
+@media (max-width: 768px) {
+  .mobile-drawer-nav button.active {
+    background: #FDE2E2 !important;
+    color: #D62828 !important;
+    font-weight: 800 !important;
+  }
+
+  .mobile-drawer-nav button:not(.active) {
+    background: transparent !important;
+    color: #64748B !important;
+  }
+}
