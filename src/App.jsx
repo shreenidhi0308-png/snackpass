@@ -834,7 +834,6 @@ const [cart, setCart] = useState([]);
 const [favorites, setFavorites] = useState([]);
 const [points, setPoints] = useState(0);
 const [order, setOrder] = useState(null);
-const [showMobileMenu, setShowMobileMenu] = useState(false);
   const nav = [
     ["Home", "⌂"],
     ["Explore", "⌕"],
@@ -885,26 +884,9 @@ const [showMobileMenu, setShowMobileMenu] = useState(false);
   ☰
 </button>
 
-  {/* MOBILE MENU */}
-  <button
-    className="mobile-menu-btn"
-    onClick={() => setMobileMenuOpen(true)}
-    aria-label="Open menu"
-  >
-    ☰
-  </button>
+ 
 
-  <div className="mobile-brand">
-    <span>👑</span>
-    <b>SnackPass</b>
-  </div>
-
-  <div className="top-actions"></div>
-    <div className="mobile-brand">
-      <span>👑</span>
-      <b>SnackPass</b>
-    </div>
-
+  
     <div className="top-actions">
   <button
     className="cart-top"
@@ -954,59 +936,83 @@ const [showMobileMenu, setShowMobileMenu] = useState(false);
 
       <nav className="mobile-drawer-nav">
 
-        <button onClick={() => {
-          setPage("Home");
-          setMobileMenuOpen(false);
-        }}>
-          🏠 <span>Home</span>
+       <button
+  className={page === "Home" ? "active" : ""}
+  onClick={() => {
+    setPage("Home");
+    setMobileMenuOpen(false);
+  }}
+>
+  🏠 <span>Home</span>
+</button>
+
+        <button
+  className={page === "Explore" ? "active" : ""}
+  onClick={() => {
+    setPage("Explore");
+    setMobileMenuOpen(false);
+  }}
+>
+  🔍 <span>Explore</span>
+</button>
+
+        <button
+  className={page === "Boss" ? "active" : ""}
+  onClick={() => {
+    setPage("Boss");
+    setMobileMenuOpen(false);
+  }}
+>
+  👑 <span>Boss</span>
+</button>
+
+        <button
+  className={page === "Orders" ? "active" : ""}
+  onClick={() => {
+    setPage("Orders");
+    setMobileMenuOpen(false);
+  }}
+>
+ 📦 <span>Orders</span>
         </button>
 
-        <button onClick={() => {
-          setPage("Explore");
-          setMobileMenuOpen(false);
-        }}>
-          🔍 <span>Explore</span>
-        </button>
+        <button
+  className={page === "Token" ? "active" : ""}
+  onClick={() => {
+    setPage("Token");
+    setMobileMenuOpen(false);
+  }}
+>
+  🎟️ <span>Token</span>
+</button>
 
-        <button onClick={() => {
-          setPage("Boss");
-          setMobileMenuOpen(false);
-        }}>
-          👑 <span>Boss</span>
-        </button>
+        <button
+  className={page === "Passport" ? "active" : ""}
+  onClick={() => {
+    setPage("Passport");
+    setMobileMenuOpen(false);
+  }}
+>
+  🪪 <span>Passport</span>
+</button>
 
-        <button onClick={() => {
-          setPage("Orders");
-          setMobileMenuOpen(false);
-        }}>
-          📦 <span>Orders</span>
-        </button>
-
-        <button onClick={() => {
-          setPage("Token");
-          setMobileMenuOpen(false);
-        }}>
-          🎟️ <span>Token</span>
-        </button>
-
-        <button onClick={() => {
-          setPage("Passport");
-          setMobileMenuOpen(false);
-        }}>
-          🪪 <span>Passport</span>
-        </button>
-
-        <button onClick={() => {
-          setPage("Achievements");
-          setMobileMenuOpen(false);
-        }}>
+        <button
+  className={page === "Achievements" ? "active" : ""}
+  onClick={() => {
+    setPage("Achievements");
+    setMobileMenuOpen(false);
+  }}
+>
           🏆 <span>Achievements</span>
         </button>
 
-        <button onClick={() => {
-          setPage("Favorites");
-          setMobileMenuOpen(false);
-        }}>
+        <button
+  className={page === "Favorites" ? "active" : ""}
+  onClick={() => {
+    setPage("Favorites");
+    setMobileMenuOpen(false);
+  }}
+>
           ❤️ <span>Favorites</span>
         </button>
 
@@ -1114,96 +1120,7 @@ const [showMobileMenu, setShowMobileMenu] = useState(false);
   )}
 </main>
 
-      <nav className="mobile-nav">
-        <MobileItem
-          icon="⌂"
-          text="Home"
-          active={page === "Home"}
-          onClick={() => setPage("Home")}
-        />
-
-        <MobileItem
-          icon="⌕"
-          text="Explore"
-          active={page === "Explore"}
-          onClick={() => setPage("Explore")}
-        />
-
-        <button
-          className="boss-button"
-          onClick={() => setPage("Boss")}
-        >
-          👑
-        </button>
-
-        <MobileItem
-          icon="🛒"
-          text="Cart"
-          active={page === "Cart"}
-          onClick={() => setPage("Cart")}
-        />
-
-        <MobileItem
-  icon="♙"
-  text="Me"
-  active={showMobileMenu}
-  onClick={() => setShowMobileMenu(!showMobileMenu)}
-/>
-      </nav>
-      {showMobileMenu && (
-  <div className="mobile-menu">
-
-    <button onClick={() => {
-      setPage("Profile");
-      setShowMobileMenu(false);
-    }}>
-      ♙ Profile
-    </button>
-
-    <button onClick={() => {
-      setPage("Orders");
-      setShowMobileMenu(false);
-    }}>
-      📦 Orders
-    </button>
-
-    <button onClick={() => {
-      setPage("Token");
-      setShowMobileMenu(false);
-    }}>
-      🎟️ Token
-    </button>
-
-    <button onClick={() => {
-      setPage("Passport");
-      setShowMobileMenu(false);
-    }}>
-      🛂 Passport
-    </button>
-
-    <button onClick={() => {
-      setPage("Achievements");
-      setShowMobileMenu(false);
-    }}>
-      🏆 Achievements
-    </button>
-
-    <button onClick={() => {
-      setPage("Favorites");
-      setShowMobileMenu(false);
-    }}>
-      ♥ Favorites
-    </button>
-
-    <button
-      className="mobile-menu-logout"
-      onClick={onLogout}
-    >
-      ⇥ Logout
-    </button>
-
-  </div>
-)}
+      
     </div>
   );
 }
