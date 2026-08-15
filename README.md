@@ -43,9 +43,3 @@ SnackPass includes different categories such as:
 - CSS
 - Git & GitHub
 
-## 🚀 Getting Started
-
-Clone the repository:
-
-```bash
-git clone https://github.com/shreenidhi0308-png/snackpass.git
