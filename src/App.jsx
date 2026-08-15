@@ -919,6 +919,27 @@ const [order, setOrder] = useState(null);
     />
 
     <aside className="mobile-menu">
+
+  <div className="mobile-menu-header">
+
+    <div className="mobile-brand">
+      <div className="mobile-logo">
+        👑
+      </div>
+
+      <b>SnackPass</b>
+    </div>
+
+    <button
+      className="mobile-menu-close"
+      onClick={() => setMobileMenuOpen(false)}
+    >
+      ✕
+    </button>
+
+  </div>
+
+  <nav className="mobile-drawer-nav"></nav>
       <nav className="mobile-drawer-nav">
 
   <button

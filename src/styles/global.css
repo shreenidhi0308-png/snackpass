@@ -5286,3 +5286,56 @@ body,
     box-sizing: border-box !important;
   }
 }
+@media (max-width: 768px) {
+
+  .mobile-menu-header {
+    width: 100%;
+    min-height: 100px;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background: #fff5f5;
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  .mobile-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .mobile-logo {
+    width: 58px;
+    height: 58px;
+    border-radius: 14px;
+    background: #e52b2b;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 34px;
+  }
+
+  .mobile-brand b {
+    font-size: 24px;
+    color: #111827;
+  }
+
+  .mobile-menu-close {
+    width: 54px;
+    height: 54px;
+    border: none;
+    border-radius: 50%;
+    background: white;
+    color: #111827;
+
+    font-size: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
