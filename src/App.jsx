@@ -894,14 +894,6 @@ const [order, setOrder] = useState(null);
 
   <div className="top-actions">
 
-    {/* CART */}
-    <button
-      className="cart-top"
-      onClick={() => setPage("Cart")}
-    >
-      🛒
-      {cart.length > 0 && <span>{cart.length}</span>}
-    </button>
 
     {/* NOTIFICATIONS */}
     <button
@@ -920,6 +912,49 @@ const [order, setOrder] = useState(null);
     </button>
 
   </div>
+  {/* MOBILE BOTTOM NAVIGATION */}
+<nav className="mobile-bottom-nav">
+
+  <button
+    className={page === "Home" ? "active" : ""}
+    onClick={() => setPage("Home")}
+  >
+    <span>⌂</span>
+    <small>Home</small>
+  </button>
+
+  <button
+    className={page === "Explore" ? "active" : ""}
+    onClick={() => setPage("Explore")}
+  >
+    <span>⌕</span>
+    <small>Explore</small>
+  </button>
+
+  <button
+    className={page === "Boss" ? "active" : ""}
+    onClick={() => setPage("Boss")}
+  >
+    <span>👑</span>
+  </button>
+
+  <button
+    className={page === "Cart" ? "active" : ""}
+    onClick={() => setPage("Cart")}
+  >
+    <span>🛒</span>
+    <small>Cart</small>
+  </button>
+
+  <button
+    className={page === "Profile" ? "active" : ""}
+    onClick={() => setPage("Profile")}
+  >
+    <span>♙</span>
+    <small>Me</small>
+  </button>
+
+</nav>
 
 </header>
   {mobileMenuOpen && (
