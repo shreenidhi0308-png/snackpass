@@ -4685,3 +4685,444 @@ body,
   font-size: 18px !important;
   color: #111827 !important;
 }
+/* =========================================
+   MOBILE HAMBURGER MENU
+   ========================================= */
+
+.mobile-menu-btn {
+  display: none;
+}
+
+.profile-top {
+  display: none;
+}
+
+.mobile-menu-overlay {
+  display: none;
+}
+
+.mobile-drawer {
+  display: none;
+}
+
+
+/* =========================================
+   MOBILE ONLY
+   ========================================= */
+
+@media (max-width: 768px) {
+
+  /* Hide desktop sidebar */
+  .sidebar {
+    display: none !important;
+  }
+
+  /* Hide old bottom navigation */
+  .mobile-bottom-nav,
+  .bottom-nav,
+  .mobile-nav,
+  .mobile-navigation {
+    display: none !important;
+  }
+
+  /* TOP HEADER */
+  .topbar {
+    width: 100% !important;
+    height: 76px !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    padding: 0 14px !important;
+
+    background: linear-gradient(
+      90deg,
+      #fff1f1,
+      #fff8f4
+    ) !important;
+
+    border-bottom: 1px solid #f4d8d8 !important;
+
+    box-sizing: border-box !important;
+
+    position: sticky !important;
+    top: 0 !important;
+
+    z-index: 1000 !important;
+  }
+
+
+  /* HAMBURGER */
+  .mobile-menu-btn {
+    display: flex !important;
+
+    width: 42px !important;
+    height: 42px !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    border: none !important;
+    background: transparent !important;
+
+    color: #111827 !important;
+
+    font-size: 28px !important;
+
+    cursor: pointer !important;
+
+    padding: 0 !important;
+
+    flex-shrink: 0 !important;
+  }
+
+
+  /* LOGO */
+  .mobile-brand {
+    display: flex !important;
+
+    align-items: center !important;
+
+    gap: 9px !important;
+
+    margin-left: 6px !important;
+  }
+
+
+  .mobile-brand span {
+    width: 42px !important;
+    height: 42px !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    background: #e32929 !important;
+
+    border-radius: 12px !important;
+
+    font-size: 22px !important;
+  }
+
+
+  .mobile-brand b {
+    font-size: 21px !important;
+
+    color: #111827 !important;
+
+    white-space: nowrap !important;
+  }
+
+
+  /* RIGHT SIDE */
+  .top-actions {
+    display: flex !important;
+
+    align-items: center !important;
+
+    gap: 7px !important;
+
+    margin-left: auto !important;
+  }
+
+
+  .cart-top,
+  .notification,
+  .profile-top {
+    width: 45px !important;
+    height: 45px !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    border-radius: 50% !important;
+
+    border: 1px solid #e5e7eb !important;
+
+    background: #ffffff !important;
+
+    font-size: 21px !important;
+
+    position: relative !important;
+
+    cursor: pointer !important;
+
+    flex-shrink: 0 !important;
+  }
+
+
+  /* PROFILE */
+  .profile-top {
+    display: flex !important;
+  }
+
+
+  /* CART COUNT */
+  .cart-top span {
+    position: absolute !important;
+
+    top: -3px !important;
+    right: -2px !important;
+
+    min-width: 20px !important;
+    height: 20px !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    border-radius: 50% !important;
+
+    background: #e32929 !important;
+
+    color: white !important;
+
+    font-size: 11px !important;
+
+    font-weight: 800 !important;
+  }
+
+
+  /* NOTIFICATION DOT */
+  .notification::after {
+    content: "" !important;
+
+    position: absolute !important;
+
+    width: 7px !important;
+    height: 7px !important;
+
+    background: #e32929 !important;
+
+    border-radius: 50% !important;
+
+    top: 8px !important;
+    right: 9px !important;
+  }
+
+
+  /* =========================================
+     DARK OVERLAY
+     ========================================= */
+
+  .mobile-menu-overlay {
+    display: block !important;
+
+    position: fixed !important;
+
+    inset: 0 !important;
+
+    background: rgba(0, 0, 0, 0.38) !important;
+
+    z-index: 2000 !important;
+  }
+
+
+  /* =========================================
+     SIDE DRAWER
+     ========================================= */
+
+  .mobile-drawer {
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    position: fixed !important;
+
+    top: 0 !important;
+    left: 0 !important;
+    bottom: 0 !important;
+
+    width: 285px !important;
+
+    max-width: 82vw !important;
+
+    background: #ffffff !important;
+
+    z-index: 2001 !important;
+
+    box-shadow: 8px 0 30px rgba(0, 0, 0, 0.18) !important;
+
+    animation: snackpassDrawer 0.25s ease-out !important;
+  }
+
+
+  @keyframes snackpassDrawer {
+
+    from {
+      transform: translateX(-100%);
+    }
+
+    to {
+      transform: translateX(0);
+    }
+
+  }
+
+
+  /* DRAWER HEADER */
+  .mobile-drawer-header {
+    height: 78px !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: space-between !important;
+
+    padding: 0 16px !important;
+
+    background: linear-gradient(
+      90deg,
+      #fff1f1,
+      #fff8f4
+    ) !important;
+
+    border-bottom: 1px solid #f2dddd !important;
+  }
+
+
+  .mobile-drawer-logo {
+    display: flex !important;
+
+    align-items: center !important;
+
+    gap: 9px !important;
+
+    font-size: 20px !important;
+
+    color: #111827 !important;
+  }
+
+
+  .mobile-drawer-logo span {
+    width: 40px !important;
+    height: 40px !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    background: #e32929 !important;
+
+    border-radius: 11px !important;
+
+    font-size: 21px !important;
+  }
+
+
+  /* CLOSE BUTTON */
+  .mobile-close-btn {
+    width: 38px !important;
+    height: 38px !important;
+
+    border: none !important;
+
+    border-radius: 50% !important;
+
+    background: #ffffff !important;
+
+    color: #111827 !important;
+
+    font-size: 17px !important;
+
+    cursor: pointer !important;
+  }
+
+
+  /* MENU ITEMS */
+  .mobile-drawer-nav {
+    flex: 1 !important;
+
+    overflow-y: auto !important;
+
+    padding: 16px 12px !important;
+  }
+
+
+  .mobile-drawer-nav button {
+    width: 100% !important;
+
+    height: 50px !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    gap: 15px !important;
+
+    padding: 0 15px !important;
+
+    margin-bottom: 5px !important;
+
+    border: none !important;
+
+    border-radius: 12px !important;
+
+    background: transparent !important;
+
+    color: #526987 !important;
+
+    font-size: 16px !important;
+
+    font-weight: 600 !important;
+
+    text-align: left !important;
+
+    cursor: pointer !important;
+  }
+
+
+  .mobile-drawer-nav button:hover,
+  .mobile-drawer-nav button:active {
+    background: #ffe9e9 !important;
+
+    color: #e32929 !important;
+  }
+
+
+  /* HOME ACTIVE */
+  .mobile-drawer-nav button:first-child {
+    background: #ffe1e1 !important;
+
+    color: #e32929 !important;
+  }
+
+
+  /* LOGOUT */
+  .mobile-logout {
+    width: calc(100% - 24px) !important;
+
+    height: 50px !important;
+
+    margin: 12px !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    gap: 15px !important;
+
+    padding: 0 15px !important;
+
+    border: none !important;
+
+    border-radius: 12px !important;
+
+    background: #fff0f0 !important;
+
+    color: #e32929 !important;
+
+    font-size: 16px !important;
+
+    font-weight: 700 !important;
+
+    cursor: pointer !important;
+  }
+
+}

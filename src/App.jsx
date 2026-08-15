@@ -827,6 +827,7 @@ function Auth({ onLogin }) {
 }
 
 function Layout({ user, onLogout }) {
+  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   const [page, setPage] = useState("Home");
   const [selectedFood, setSelectedFood] = useState(null);
 const [cart, setCart] = useState([]);
@@ -876,6 +877,29 @@ const [showMobileMenu, setShowMobileMenu] = useState(false);
 
       <main className="main-content">
   <header className="topbar">
+    <button
+  className="mobile-menu-btn"
+  onClick={() => setMobileMenuOpen(true)}
+  aria-label="Open menu"
+>
+  ☰
+</button>
+
+  {/* MOBILE MENU */}
+  <button
+    className="mobile-menu-btn"
+    onClick={() => setMobileMenuOpen(true)}
+    aria-label="Open menu"
+  >
+    ☰
+  </button>
+
+  <div className="mobile-brand">
+    <span>👑</span>
+    <b>SnackPass</b>
+  </div>
+
+  <div className="top-actions"></div>
     <div className="mobile-brand">
       <span>👑</span>
       <b>SnackPass</b>
@@ -896,8 +920,111 @@ const [showMobileMenu, setShowMobileMenu] = useState(false);
 >
   🔔<i />
 </button>
+<button
+  className="profile-top"
+  onClick={() => setPage("Profile")}
+  aria-label="Profile"
+>
+  👤
+</button>
 </div>
   </header>
+  {mobileMenuOpen && (
+  <>
+    <div
+      className="mobile-menu-overlay"
+      onClick={() => setMobileMenuOpen(false)}
+    />
+
+    <aside className="mobile-drawer">
+
+      <div className="mobile-drawer-header">
+        <div className="mobile-drawer-logo">
+          <span>👑</span>
+          <b>SnackPass</b>
+        </div>
+
+        <button
+          className="mobile-close-btn"
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          ✕
+        </button>
+      </div>
+
+      <nav className="mobile-drawer-nav">
+
+        <button onClick={() => {
+          setPage("Home");
+          setMobileMenuOpen(false);
+        }}>
+          🏠 <span>Home</span>
+        </button>
+
+        <button onClick={() => {
+          setPage("Explore");
+          setMobileMenuOpen(false);
+        }}>
+          🔍 <span>Explore</span>
+        </button>
+
+        <button onClick={() => {
+          setPage("Boss");
+          setMobileMenuOpen(false);
+        }}>
+          👑 <span>Boss</span>
+        </button>
+
+        <button onClick={() => {
+          setPage("Orders");
+          setMobileMenuOpen(false);
+        }}>
+          📦 <span>Orders</span>
+        </button>
+
+        <button onClick={() => {
+          setPage("Token");
+          setMobileMenuOpen(false);
+        }}>
+          🎟️ <span>Token</span>
+        </button>
+
+        <button onClick={() => {
+          setPage("Passport");
+          setMobileMenuOpen(false);
+        }}>
+          🪪 <span>Passport</span>
+        </button>
+
+        <button onClick={() => {
+          setPage("Achievements");
+          setMobileMenuOpen(false);
+        }}>
+          🏆 <span>Achievements</span>
+        </button>
+
+        <button onClick={() => {
+          setPage("Favorites");
+          setMobileMenuOpen(false);
+        }}>
+          ❤️ <span>Favorites</span>
+        </button>
+
+      </nav>
+
+      <button
+        className="mobile-logout"
+        onClick={() => {
+          setMobileMenuOpen(false);
+          onLogout();
+        }}
+      >
+        ↪ <span>Logout</span>
+      </button>
+
+    </aside>
+  </>
+)}
 
   {page === "Home" && (
     <HomePage
