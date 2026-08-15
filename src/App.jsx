@@ -893,6 +893,14 @@ const [order, setOrder] = useState(null);
   </div>
 
   <div className="top-actions">
+    <button
+  className="cart-top"
+  onClick={() => setPage("Cart")}
+>
+  🛒
+  {cart.length > 0 && <span>{cart.length}</span>}
+</button>
+
 
 
     {/* NOTIFICATIONS */}
