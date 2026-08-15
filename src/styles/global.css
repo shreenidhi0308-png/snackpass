@@ -5625,3 +5625,279 @@ body,
     box-sizing: border-box !important;
   }
 }
+/* =========================================================
+   FINAL MOBILE FIX
+   PHONE ONLY — DESKTOP/LAPTOP UNCHANGED
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  /* ================= TOP HEADER ================= */
+
+  .topbar {
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+    height: 96px !important;
+    min-height: 96px !important;
+
+    padding: 10px 14px !important;
+    gap: 8px !important;
+
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  /* THREE LINES */
+  .mobile-menu-toggle {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 48px !important;
+    min-width: 48px !important;
+    height: 48px !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    border: 0 !important;
+    background: transparent !important;
+
+    font-size: 36px !important;
+    line-height: 1 !important;
+
+    flex-shrink: 0 !important;
+  }
+
+  /* SNACKPASS BRAND */
+  .mobile-brand {
+    display: flex !important;
+    align-items: center !important;
+
+    gap: 8px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+
+    white-space: nowrap !important;
+    overflow: hidden !important;
+  }
+
+  .mobile-brand span {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 52px !important;
+    min-width: 52px !important;
+    height: 52px !important;
+
+    border-radius: 14px !important;
+
+    background: #ed1c24 !important;
+
+    font-size: 30px !important;
+
+    flex-shrink: 0 !important;
+  }
+
+  .mobile-brand b {
+    font-size: 23px !important;
+    line-height: 1 !important;
+
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  /* CART + NOTIFICATION */
+  .top-actions {
+    display: flex !important;
+    align-items: center !important;
+
+    gap: 6px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    flex-shrink: 0 !important;
+  }
+
+  .cart-top,
+  .notification {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 48px !important;
+    min-width: 48px !important;
+
+    height: 48px !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    flex-shrink: 0 !important;
+  }
+
+  /* PROFILE NOT IN TOP ON PHONE */
+  .profile-top {
+    display: none !important;
+  }
+
+
+  /* ================= BOTTOM NAVIGATION ================= */
+
+  /*
+     IMPORTANT:
+     Keep your existing bottom navigation.
+     This forces it to stay visible on the phone.
+  */
+
+  .bottom-nav,
+  .mobile-bottom-nav,
+  .bottom-navigation {
+    display: flex !important;
+
+    position: fixed !important;
+
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+
+    width: 100% !important;
+
+    z-index: 10000 !important;
+
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+
+  /* ================= MOBILE DRAWER ================= */
+
+  .mobile-menu {
+    position: fixed !important;
+
+    /*
+       Start below the phone header
+    */
+    top: 96px !important;
+
+    /*
+       STOP ABOVE BOTTOM NAV
+    */
+    bottom: 82px !important;
+
+    left: 0 !important;
+
+    width: 82% !important;
+    max-width: 560px !important;
+
+    height: auto !important;
+
+    z-index: 9000 !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    padding: 18px 0 12px !important;
+
+    margin: 0 !important;
+
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+
+    box-sizing: border-box !important;
+
+    background: white !important;
+
+    border-radius: 0 24px 24px 0 !important;
+  }
+
+  /* MENU ITEMS */
+  .mobile-drawer-nav {
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    align-items: stretch !important;
+
+    justify-content: flex-start !important;
+
+    gap: 4px !important;
+
+    width: 100% !important;
+
+    padding: 0 18px !important;
+    margin: 0 !important;
+
+    box-sizing: border-box !important;
+  }
+
+  .mobile-drawer-nav button {
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: flex-start !important;
+
+    width: 100% !important;
+
+    min-height: 58px !important;
+
+    padding: 0 20px !important;
+    margin: 0 !important;
+
+    gap: 20px !important;
+
+    border: none !important;
+
+    background: transparent !important;
+
+    text-align: left !important;
+
+    box-sizing: border-box !important;
+  }
+
+  .mobile-drawer-nav button span {
+    display: inline-block !important;
+
+    flex: 1 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    text-align: left !important;
+  }
+
+  .mobile-drawer-nav button.active {
+    background: #fde1e1 !important;
+
+    border-radius: 20px !important;
+
+    color: #d62828 !important;
+  }
+
+  .mobile-drawer-nav button.active span {
+    color: #d62828 !important;
+  }
+
+  /* LOGOUT */
+  .mobile-logout {
+    width: calc(100% - 36px) !important;
+
+    min-height: 58px !important;
+
+    margin: auto 18px 0 !important;
+
+    padding: 0 20px !important;
+
+    flex-shrink: 0 !important;
+
+    box-sizing: border-box !important;
+  }
+}
