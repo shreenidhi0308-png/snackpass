@@ -4180,3 +4180,290 @@ body,
   font-size: 13px;
   line-height: 1.4;
 }
+/* =========================================
+   MOBILE RESPONSIVE FIX - SNACKPASS
+   ========================================= */
+
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Main content */
+  main,
+  .main-content,
+  .page-content {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* -------------------------
+     CART PAGE
+     ------------------------- */
+
+  .cart-container,
+  .cart-page,
+  .cart-content {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+    margin: 0;
+  }
+
+  /* Cart + summary become one column */
+  .cart-layout,
+  .cart-main,
+  .cart-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 18px;
+  }
+
+  /* Individual cart item */
+  .cart-item,
+  .cart-card,
+  .cart-item-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    display: flex !important;
+    align-items: center;
+    overflow: hidden;
+    padding: 12px !important;
+    margin-bottom: 14px;
+  }
+
+  /* Food image - small square */
+  .cart-item img,
+  .cart-card img,
+  .cart-item-card img {
+    width: 120px !important;
+    height: 120px !important;
+    min-width: 120px !important;
+    max-width: 120px !important;
+    object-fit: cover !important;
+    border-radius: 14px !important;
+  }
+
+  /* Food information */
+  .cart-item-info,
+  .cart-info {
+    flex: 1;
+    min-width: 0;
+    padding: 0 10px;
+  }
+
+  .cart-item-info h3,
+  .cart-info h3 {
+    font-size: 18px;
+    line-height: 1.2;
+    margin: 0 0 6px;
+    word-break: normal;
+  }
+
+  .cart-item-info p,
+  .cart-info p {
+    font-size: 14px;
+  }
+
+  /* Quantity controls */
+  .quantity-controls,
+  .cart-quantity {
+    flex-shrink: 0;
+  }
+
+  /* -------------------------
+     ORDER SUMMARY
+     ------------------------- */
+
+  .order-summary,
+  .cart-summary,
+  .summary-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 20px !important;
+    overflow: hidden;
+  }
+
+  .order-summary h2,
+  .cart-summary h2,
+  .summary-card h2 {
+    font-size: 24px;
+  }
+
+  /* Summary rows */
+  .order-summary > div,
+  .cart-summary > div {
+    max-width: 100%;
+  }
+
+  /* Checkout button */
+  .order-summary button,
+  .cart-summary button,
+  .summary-card button {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    font-size: 15px;
+    padding: 15px 10px;
+    white-space: nowrap;
+  }
+
+  /* -------------------------
+     CART HEADER
+     ------------------------- */
+
+  .cart-header {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .cart-header h1 {
+    font-size: 38px;
+  }
+
+  /* -------------------------
+     TOP HEADER
+     ------------------------- */
+
+  header {
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  /* -------------------------
+     MOBILE BOTTOM NAV
+     ------------------------- */
+
+  .bottom-nav,
+  .mobile-bottom-nav {
+    position: fixed;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    width: auto;
+    max-width: calc(100% - 24px);
+    z-index: 9999;
+  }
+
+  /* Give page space above bottom navigation */
+  .cart-page,
+  .cart-container {
+    padding-bottom: 110px !important;
+  }
+}
+
+
+/* Smaller phones */
+@media (max-width: 480px) {
+
+  main,
+  .main-content,
+  .page-content {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .cart-item,
+  .cart-card,
+  .cart-item-card {
+    padding: 10px !important;
+  }
+
+  .cart-item img,
+  .cart-card img,
+  .cart-item-card img {
+    width: 105px !important;
+    height: 105px !important;
+    min-width: 105px !important;
+    max-width: 105px !important;
+  }
+
+  .cart-item-info h3,
+  .cart-info h3 {
+    font-size: 16px;
+  }
+
+  .cart-header h1 {
+    font-size: 32px;
+  }
+
+  .order-summary,
+  .cart-summary,
+  .summary-card {
+    padding: 16px !important;
+  }
+}
+/* ===== MOBILE CART FIX ===== */
+
+@media (max-width: 768px) {
+
+  /* Prevent the whole website from becoming wider than the phone */
+  html,
+  body,
+  #root {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+  }
+
+  /* ORDER SUMMARY */
+  .cart-summary {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 20px 0 !important;
+    padding: 20px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  .cart-summary h2 {
+    font-size: 26px !important;
+    margin-bottom: 24px !important;
+  }
+
+  .cart-summary .summary-row {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 10px !important;
+  }
+
+  .cart-summary .discount-hint {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    white-space: normal !important;
+  }
+
+  .cart-summary button {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    white-space: nowrap !important;
+  }
+}
