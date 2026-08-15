@@ -875,42 +875,53 @@ const [order, setOrder] = useState(null);
       </aside>
 
       <main className="main-content">
-  <header className="topbar">
-    <button
-  className="mobile-menu-btn"
-  onClick={() => setMobileMenuOpen(true)}
-  aria-label="Open menu"
->
-  ☰
-</button>
+ <header className="topbar">
 
- 
-
-  
-    <div className="top-actions">
+  {/* THREE-LINE MENU - PHONE ONLY */}
   <button
-    className="cart-top"
-    onClick={() => setPage("Cart")}
+    className="mobile-menu-toggle"
+    onClick={() => setMobileMenuOpen(true)}
+    aria-label="Open menu"
   >
-    🛒
-    {cart.length > 0 && <span>{cart.length}</span>}
+    ☰
   </button>
 
-  <button
-  className="notification"
-  onClick={() => setPage("Notifications")}
->
-  🔔<i />
-</button>
-<button
-  className="profile-top"
-  onClick={() => setPage("Profile")}
-  aria-label="Profile"
->
-  👤
-</button>
-</div>
-  </header>
+  {/* SNACKPASS LOGO - ALWAYS VISIBLE ON PHONE */}
+  <div className="mobile-brand">
+    <span>👑</span>
+    <b>SnackPass</b>
+  </div>
+
+  <div className="top-actions">
+
+    {/* CART */}
+    <button
+      className="cart-top"
+      onClick={() => setPage("Cart")}
+    >
+      🛒
+      {cart.length > 0 && <span>{cart.length}</span>}
+    </button>
+
+    {/* NOTIFICATIONS */}
+    <button
+      className="notification"
+      onClick={() => setPage("Notifications")}
+    >
+      🔔
+    </button>
+
+    {/* PROFILE - KEEP FOR LAPTOP, HIDE ON PHONE */}
+    <button
+      className="profile-top"
+      onClick={() => setPage("Profile")}
+    >
+      👤
+    </button>
+
+  </div>
+
+</header>
   {mobileMenuOpen && (
   <>
     <div
@@ -920,25 +931,7 @@ const [order, setOrder] = useState(null);
 
     <aside className="mobile-menu">
 
-  <div className="mobile-menu-header">
-
-    <div className="mobile-brand">
-      <div className="mobile-logo">
-        👑
-      </div>
-
-      <b>SnackPass</b>
-    </div>
-
-    <button
-      className="mobile-menu-close"
-      onClick={() => setMobileMenuOpen(false)}
-    >
-      ✕
-    </button>
-
-  </div>
-
+  
   <nav className="mobile-drawer-nav"></nav>
       <nav className="mobile-drawer-nav">
 
