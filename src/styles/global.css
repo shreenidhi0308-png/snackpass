@@ -6084,3 +6084,65 @@ body,
   }
 
 }
+@media (max-width: 768px) {
+
+  .topbar {
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+    height: 96px !important;
+    padding: 10px 16px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  /* ☰ */
+  .mobile-menu-toggle {
+    flex: 0 0 48px !important;
+    width: 48px !important;
+    height: 48px !important;
+    margin: 0 12px 0 0 !important;
+    padding: 0 !important;
+  }
+
+  /* 👑 SnackPass */
+  .mobile-brand {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    margin: 0 !important;
+  }
+
+  .mobile-brand span {
+    flex: 0 0 56px !important;
+    width: 56px !important;
+    height: 56px !important;
+  }
+
+  .mobile-brand b {
+    font-size: 24px !important;
+    white-space: nowrap !important;
+  }
+
+  /* 🔔 */
+  .top-actions {
+    flex: 0 0 48px !important;
+    width: 48px !important;
+    margin-left: 8px !important;
+    padding: 0 !important;
+  }
+
+  .notification {
+    width: 48px !important;
+    height: 48px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Remove cart from TOP only */
+  .cart-top {
+    display: none !important;
+  }
+}
